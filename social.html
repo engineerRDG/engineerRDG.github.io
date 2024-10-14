@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="br">
+  <head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1" />
+    <title>Rodrigo M. Araujo - Posts do Mastodon</title>
+    <link href="css/shorby-main.css" rel="stylesheet" />
+    <link href="css/shorby-page.css" rel="stylesheet" />
+    <link href="css/emoji.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css'>
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="Rodrigo Araujo" />
+  </head>
+
+  <body class="theme-default default-theme">
+    <center>
+    <div class="container smartpage-container">
+      <header>
+        <h1>Feed</h1>
+      </header>
+
+      <!-- Seção onde o feed do Mastodon será exibido -->
+      <div id="mastodon-posts"></div>
+
+      <script>
+        // URL do feed RSS do Mastodon
+        const rssUrl = 'https://mastodon.com.br/@rodrigoaraujo.rss';
+
+        // Função para carregar o feed RSS e gerar embeds para os posts
+        fetch(rssUrl)
+          .then(response => response.text())
+          .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+          .then(data => {
+            const items = data.querySelectorAll("item");
+            const container = document.getElementById("mastodon-posts");
+
+            items.forEach(item => {
+              const link = item.querySelector("link").textContent;
+              const embedUrl = link + "/embed"; // Adiciona "/embed" para gerar o embed do post
+
+              // Cria um iframe para cada post
+              const iframe = document.createElement("iframe");
+              iframe.setAttribute("src", embedUrl);
+              iframe.setAttribute("class", "mastodon-embed");
+              iframe.setAttribute("style", "max-width: 100%; border: 0; margin-bottom: 20px;");
+              iframe.setAttribute("width", "400");
+              iframe.setAttribute("allowfullscreen", "allowfullscreen");
+
+              container.appendChild(iframe);
+            });
+
+            // Adiciona o script necessário para o embed funcionar
+            const script = document.createElement("script");
+            script.setAttribute("src", "https://mastodon.com.br/embed.js");
+            script.setAttribute("async", "async");
+            document.body.appendChild(script);
+          })
+          .catch(error => {
+            console.error("Erro ao carregar o feed RSS:", error);
+            document.getElementById("mastodon-posts").innerHTML = "<p>Erro ao carregar os posts do Mastodon.</p>";
+          });
+      </script>
+
+      <footer>
+        <div class="powered-by-shorby">
+          <a>feito pelo <strong>rodrigo</strong></a>
+        </div>
+      </footer>
+    </div>
+    <center>
+</body>
+</html>
