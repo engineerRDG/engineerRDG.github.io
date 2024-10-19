@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="br">
+  <head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1" />
+    <title>Links - Rodrigo M. Araujo</title>
+    <link href="css/shorby-main.css" rel="stylesheet" />
+    <link href="css/shorby-page.css" rel="stylesheet" />
+    <link href="css/emoji.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css'>
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="Rodrigo Araujo" />
+
+
+  </head>
+
+  <body class="theme-default default-theme">
+    <style>
+            mark { 
+        background-color: black;
+        color: white;
+      }
+      
+      markred { 
+        background-color: red;
+        color: white;
+      }
+
+      markblue { 
+        background-color: rgb(0, 11, 100);
+        color: white;
+      }
+
+      markyellow { 
+        background-color: yellow;
+        color: black;
+      }
+
+       /* Estilizando o botão dropdown */
+       .dropdown {
+            position: absolute;
+            top: 10px;  /* Alinhando no canto superior */
+            right: 10px; /* Alinhando no canto direito */
+            display: inline-block;
+        }
+
+        .dropdown button {
+            background-color: #000; /* Botão preto */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block; /* Exibe as opções quando o mouse está sobre o botão */
+        }
+
+        .dropdown button:hover {
+            background-color: #333; /* Altera a cor ao passar o mouse */
+        }
+
+
+   /* Estilo do formulário de postagem */
+   .post-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f7f7f7;
+    }
+
+    .post-container textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      resize: none;
+      margin-bottom: 10px;
+    }
+
+    .post-container input[type="file"],
+    .post-container input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .post-container button {
+      padding: 10px 20px;
+      background-color: #1da1f2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .post-container button:hover {
+      background-color: #0d8de2;
+    }
+
+    /* Estilo das postagens */
+    .toot {
+      max-width: 600px;
+      margin: 10px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+
+    .toot .toot-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .toot .toot-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .toot .toot-username {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .toot .toot-content {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .toot .toot-time {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .toot img {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .toot audio, .toot video {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .toot iframe {
+      width: 100%;
+      height: 315px;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    /* Estilo geral da página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+
+
+      </style>
+
+    <script src="js/shorby.js"></script>
+    <div class="container smartpage-container">
+      <header>
+
+                <!-- Botão Dropdown (Menu no canto superior direito da imagem) -->
+                <div class="dropdown">
+                  <button>Menu</button>
+                  <div class="dropdown-content">
+                      <a href="index.html">Início</a>
+                      <a href="sobre.html">Sobre</a>
+                      <a href="artigos.html">Artigos</a>
+                      <a href="projetos.html">Projetos</a>
+                  </div>
+              </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <h2 title="Lean Manufacturing" class="block-item layout-button"><span><b>Feed</b></span></h2>
+
+
+
+
+<!-- Container de postagem -->
+
+
+<!-- Área onde as postagens aparecerão -->
+<div id="tootFeed">
+      
+
+    
+      <div class="toot">
+        <div>
+          <div class="toot-header">
+            <img src="https://sun6-22.userapi.com/impg/NEZQoXsQuW3exIiE50ryEaraPLZ0WggJwb8osQ/WYWAwtbIy1I.jpg?size=280x280&amp;quality=96&amp;sign=33781f8dcf8523dd76972e2eb7189395&amp;type=album" class="toot-avatar" alt="Avatar">
+            <span class="toot-username">Rodrigo M. Araujo</span>
+          </div>
+          <div class="toot-content">teste de video</div>
+          <iframe src="https://www.youtube.com/embed/5qfZsK35aLs" frameborder="0" allowfullscreen=""></iframe>
+          <div class="toot-time">19/10/2024, 13:28:58</div>
+        </div>
+      </div>
+    
+      <div class="toot">
+        <div>
+          <div class="toot-header">
+            <img src="https://sun6-22.userapi.com/impg/NEZQoXsQuW3exIiE50ryEaraPLZ0WggJwb8osQ/WYWAwtbIy1I.jpg?size=280x280&amp;quality=96&amp;sign=33781f8dcf8523dd76972e2eb7189395&amp;type=album" class="toot-avatar" alt="Avatar">
+            <span class="toot-username">Rodrigo M. Araujo</span>
+          </div>
+          <div class="toot-content">Rodrigo</div>
+          <img src="https://sun9-47.userapi.com/impg/_EJ8pQhR2MKCS2kehHukaVhaf2Kn3jJOqYY3iw/Pvf-7mzHbmA.jpg?size=1080x1080&quality=95&sign=9aa4c2619fd844d0800962ba70b98e09&type=album" alt="Imagem da postagem">
+          <div class="toot-time">19/10/2024, 13:26:24</div>
+        </div>
+      </div>
+    </div>
+
+  <br>
+  <br>
+
+  <div class="powered-by-shorby">
+    <a>feito pelo <strong>rodrigo</strong>
+    </a>
+  </div>
+
+</div>
+
+</li>
+
+
+
+
+
+    </div>
+  </div>
+</body>
+</html>
