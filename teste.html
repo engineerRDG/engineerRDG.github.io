@@ -115,6 +115,65 @@
         font-family: var(--font-family-sans-serif, Arial, sans-serif);
       }
 
+      table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #343a40;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    td {
+      color: #343a40;
+    }
+
+
+    .button-container {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+
+    .custom-button {
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      background-color: #f8f9fa;
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .custom-button:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+
       </style>
 
     <script src="js/shorby.js"></script>
@@ -248,9 +307,44 @@
     </div>
   </div>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Character</th>
+        <th>Function</th>
+        <th>Potential Modifications</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Signal Whip</td>
+        <td>Amos</td>
+        <td>Scares enemies by cracking near them, inflicts 2 points of fear. Limited to horizontal range.</td>
+        <td>Could be used for environmental puzzles, like triggering switches or breaking objects.</td>
+      </tr>
+      <tr>
+        <td>Carbide Lantern</td>
+        <td>Amos</td>
+        <td>Provides light and repels bats. Requires fuel (carbide rocks). When wet, fuel resets.</td>
+        <td>Could be used to illuminate hidden paths, interact with objects, or unlock new areas.</td>
+      </tr>
+      <tr>
+        <td>Pickaxe</td>
+        <td>Amos</td>
+        <td>Breaks rocks and obstacles, used to grapple walls to descend safely.</td>
+        <td>Can it have more combat uses or be used to interact with other objects, like triggering traps or solving puzzles?</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+<div class="button-container">
+    <a href="#" class="custom-button">Telegram</a>
+  </div>
+  
 
 </div>
-
 </div>
   </div>
 </body>
