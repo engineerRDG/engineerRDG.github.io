@@ -92,6 +92,7 @@
 <script src="js/shorby.js"></script>
 <div class="container smartpage-container">
 <header>
+
 <li id="block0" class="links-block"><i title="" class="block-item layout-card" style="background-image:">
 <img src="https://sun9-47.userapi.com/impg/_EJ8pQhR2MKCS2kehHukaVhaf2Kn3jJOqYY3iw/Pvf-7mzHbmA.jpg?size=1080x1080&quality=95&sign=9aa4c2619fd844d0800962ba70b98e09&type=album" class="avatar" alt="" title="Rodrigo Araujo" />
 </i> 
@@ -99,18 +100,94 @@
 <h1 align="left" style="font-size: 1.9rem;">Rodrigo M. Araujo</h1>
 <div class="bio-description">
 <a>
-Founder @ <b>engenheiro.org LLC</b>
-<br>
-CEO @ <b>BENWIL Engineering LTD</b>
-<br>
 Engenheiro Mecânico
 <br>
 Engenheiro de Segurança do Trabalho
 <br>
-<SMALL><B>Especialista em Qualidade e Melhoria Contínua</B></SMALL>
+<SMALL><B>Especialista em Excelência Operacional</B></SMALL>
 </a>
 </div>
 </div>
+
+<!-- SOBRE  -->
+<p>
+  <center>
+  <b class="block-item layout-button" onclick="toggleCertificacoes()">
+SOBRE</b>
+</center>
+</p>
+
+<div id="certificacoes-content" style="display: none; margin-top: 10px;">
+  <br>
+  Chairman @ <b>engenheiro.org LLC</b>
+<br>
+CEO @ <b>BENWIL Engineering LTD</b>
+<Br>
+<br>
+  <p>
+    Pós graduado em
+    
+    <br>
+<img src="https://img.shields.io/badge/Engenharia%20de%20Seguran%C3%A7a%20do%20Trabalho-343a40"/></a>
+    <br>
+<img src="https://img.shields.io/badge/Gest%C3%A3o%20da%20Qualidade%20e%20Processos-343a40"/></a>
+    <br>
+<img src="https://img.shields.io/badge/Gest%C3%A3o%20de%20Projetos-343a40"/></a>
+    <br>
+<img src="https://img.shields.io/badge/Lean%20Manufacturing-343a40"/></a>
+   <br>
+  <img src="https://img.shields.io/badge/Gestão%20Industrial-343a40"/></a>
+   </p>
+    <p>
+  Pós graduando em
+  <br>
+  <img src="https://img.shields.io/badge/Acidente%20do%20Trabalho%20e%20Doen%C3%A7as%20Profissionais-343a40"/></a>
+  </p>
+  <p>
+Certificações Internacionais
+  <br>
+  <img src="https://img.shields.io/badge/Black%20Belt%20Lean%20Six%20Sigma-343a40"/></a>
+  <br>
+<img src="https://img.shields.io/badge/International%20SCRUM%20Master-343a40"/></a>
+  <br>
+<img src="https://img.shields.io/badge/Lean%20Professional%20Certification%E2%84%A2-343a40"/></a>
+  <br>
+<img src="https://img.shields.io/badge/ISO%209001%20Quality%20Management%20Systems%20Associate%E2%84%A2-343a40"/></a>
+  <br>
+<img src="https://img.shields.io/badge/ISO/IEC%2020000%20IT%20Service%20Management%20Associate%E2%84%A2-343a40"/></a>
+  <br>
+<img src="https://img.shields.io/badge/ISO/IEC%2027001%20Information%20Security%20Associate%E2%84%A2-343a40"/></a>
+  <br>
+<img src="https://img.shields.io/badge/ISO/Remote%20Work%20Professional%20Certification%20(RWPC)%E2%84%A2-343a40"/></a>
+  </p>
+</div>
+
+
+<!-- CONTATO  -->
+<p>
+  <center>
+  <b class="block-item layout-button" onclick="toggleContato()">
+CONTATO</b>
+</center>
+</p>
+<br>
+<div id="contato-content" style="display: none; margin-top: 10px;">
+  <center>
+    <a href="https://wa.me/+5591984565209"><img src="https://cdn-icons-png.flaticon.com/512/2504/2504957.png" alt="WhatsApp" width="40" height="40"></a>
+    &emsp;
+    &emsp;&emsp;
+  <a href="https://t.me/rodrigoaraujoeng"><img src="https://cdn-icons-png.flaticon.com/512/2504/2504941.png"alt="Telegram" width="40" height="40"></a>
+  &emsp;
+  &emsp;&emsp;
+  <a href="mailto:rodrigo@engenheiro.org"><img src="https://cdn-icons-png.flaticon.com/512/2374/2374449.png "alt="iMessage" width="40" height="40"></a>
+  </center>
+  <br>
+</div>
+
+
+</center>
+
+
 
 <small>
 <div class="powered-by-shorby">
@@ -129,11 +206,28 @@ Engenheiro de Segurança do Trabalho
 <i class="em em-flag-ch" aria-role="presentation" aria-label="Switzerland Flag"></i>
 <i class="em em-gb" aria-role="presentation" aria-label="United Kingdom Flag"></i>
 </small>
+</li>
+</div>
 </div>
 </div>
 
 </header>
 </div>
 </div>
+
+<script>
+  function toggleCertificacoes() {
+    var content = document.getElementById("certificacoes-content");
+    content.style.display = content.style.display === "none" ? "block" : "none";
+  }
+
+  function toggleContato() {
+    var content = document.getElementById("contato-content");
+    content.style.display = content.style.display === "none" ? "block" : "none";
+  }
+</script>
+
+
+
 </body>
 </html>
