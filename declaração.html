@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1" />
+    <title>ENGENHEIRO.org - Seu Currículo com Experiência Internacional!</title>
+    <link href="css/shorby-main.css" rel="stylesheet" />
+    <link href="css/shorby-page.css" rel="stylesheet" />
+    <link href="css/emoji.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/14106/14106201.png">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css'>
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Estilos importados do HTML original (mantidos para consistência, se usados) */
+        mark { 
+            background-color: black;
+            color: white;
+        }
+        markred { 
+            background-color: red;
+            color: white;
+        }
+        markblue { 
+            background-color: rgb(3, 26, 62 );
+            color: white;
+        }
+        markyellow { 
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Estilo para os botões de certificação (mantido caso precise em outro contexto) */
+        .certification-button {
+            background-color: #343a40;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            font-size: 0.35rem;
+            border-radius: 8px;
+            cursor: default;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            margin-right: 3px;
+            margin-bottom: 3px;
+            display: inline-block;
+        }
+
+        /* Estilos específicos para a Landing Page de Vendas */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevenir scroll horizontal indesejado */
+        }
+
+        .hero-section {
+            background-color: #1a2533; /* Azul escuro corporativo */
+            color: #f0f4f8; /* Texto claro para contraste */
+            padding: 80px 20px; /* Mais padding */
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.5rem; /* Ajustado para mobile-first */
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #ffffff; 
+        }
+        .hero-section p {
+            font-size: 1.1rem; /* Ajustado para mobile-first */
+            margin-bottom: 35px;
+            max-width: 700px; 
+            margin-left: auto;
+            margin-right: auto;
+            color: #e0e0e0; 
+        }
+        .cta-button {
+            background-color: #007bff; 
+            color: white;
+            padding: 15px 30px; /* Ajustado para mobile-first */
+            font-size: 1.1rem; /* Ajustado para mobile-first */
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(0, 123, 255, 0.4);
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); 
+        }
+
+        .section {
+            padding: 50px 20px; 
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2rem; /* Ajustado para mobile-first */
+            font-weight: 700;
+            margin-bottom: 40px; 
+            color: #1a2533;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px; 
+            height: 4px;
+            background-color: #007bff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Default para mobile */
+            gap: 30px; 
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .feature-item {
+            background-color: #ffffff;
+            padding: 25px; 
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-7px); 
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+        }
+        .feature-item h3 {
+            font-size: 1.3rem; /* Ajustado para mobile-first */
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 12px;
+        }
+        .feature-item p {
+            font-size: 0.95rem; /* Ajustado para mobile-first */
+            color: #555;
+        }
+        .feature-icon {
+            font-size: 2.5rem; 
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-section {
+            background-color: #f0f4f8; 
+            position: relative; /* Para posicionar botões do carrossel */
+            overflow: hidden; /* Para o carrossel */
+        }
+        .testimonial-carousel-container {
+            max-width: 1200px; /* Ou a largura desejada para o carrossel */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding-bottom: 20px; /* Espaço para scrollbar se visível ou apenas respiro */
+        }
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin: 10px; /* Espaçamento entre cards */
+            min-width: 280px; /* Largura mínima do card */
+            width: calc(100% - 20px); /* Ocupa quase toda a largura em telas pequenas */
+            flex-shrink: 0; /* Impede que os cards encolham */
+            box-sizing: border-box;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #444; 
+            margin-bottom: 15px;
+            font-size: 0.95rem; /* Ajustado para mobile-first */
+        }
+        .testimonial-card .author {
+            font-weight: 700;
+            color: #007bff; 
+            font-size: 0.9rem; /* Ajustado para mobile-first */
+        }
+        .testimonial-avatar {
+            width: 65px; /* Ajustado para mobile-first */
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px auto; /* Centralizado */
+            display: block;
+            border: 3px solid #007bff;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 123, 255, 0.7);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.5rem;
+            line-height: 1;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: #0056b3;
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        .pricing-section .features-grid { /* Reutilizando features-grid para os planos */
+             grid-template-columns: 1fr; /* Default para mobile */
+             gap: 25px;
+        }
+        .pricing-plan {
+            border: 2px solid #e0e0e0;
+            padding: 25px; /* Ajustado para mobile-first */
+            border-radius: 12px;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center; 
+        }
+        .pricing-plan:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+        }
+        .pricing-plan.featured {
+            border-color: #007bff;
+            box-shadow: 0 10px 40px rgba(0, 123, 255, 0.25);
+            transform: scale(1.03); 
+        }
+         .pricing-plan.featured:hover {
+            transform: scale(1.05) translateY(-7px);
+        }
+        .pricing-plan h3 {
+            font-size: 1.4rem; /* Ajustado para mobile-first */
+            font-weight: 700;
+            color: #1a2533;
+            margin-bottom: 15px;
+        }
+        .pricing-plan .price {
+            font-size: 2.5rem; /* Ajustado para mobile-first */
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .pricing-plan .price span {
+            font-size: 0.9rem; /* Ajustado para mobile-first */
+            color: #6c757d;
+        }
+        .pricing-plan ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            text-align: left; 
+            flex-grow: 1;
+            font-size: 0.85rem; 
+        }
+        .pricing-plan ul li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .pricing-plan ul li::before {
+            content: '✓'; 
+            color: #28a745; 
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        .pricing-plan .cta-button {
+            width: 100%;
+            margin-top: auto; 
+            padding: 10px 18px; 
+            font-size: 0.95rem; /* Ajustado para mobile-first */
+        }
+
+        .final-cta-section {
+            background-color: #007bff; 
+            color: white;
+        }
+        .final-cta-section .section-title {
+            color: white;
+        }
+        .final-cta-section .section-title::after {
+            background-color: white;
+        }
+        .final-cta-section p {
+            font-size: 1.1rem; /* Ajustado para mobile-first */
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .final-cta-section .cta-button {
+            background-color: #ffffff; 
+            color: #007bff; 
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        .final-cta-section .cta-button:hover {
+            background-color: #f0f0f0;
+             color: #0056b3;
+        }
+
+        .footer {
+            background-color: #1a2533; 
+            color: #adb5bd; 
+            padding: 30px 20px; 
+            text-align: center;
+            font-size: 0.85rem; /* Ajustado para mobile-first */
+        }
+        .footer p {
+            margin-bottom: 8px; 
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .company-names {
+            font-size: 0.75rem; /* Ajustado para mobile-first */
+            color: #888;
+            margin-top:15px;
+        }
+
+        /* Media Queries para Responsividade */
+        @media (min-width: 640px) { /* sm */
+            .hero-section h1 { font-size: 2.8rem; }
+            .hero-section p { font-size: 1.2rem; }
+            .cta-button { padding: 18px 35px; font-size: 1.2rem; }
+            .section-title { font-size: 2.2rem; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); } /* 2 colunas para features */
+            .feature-item h3 { font-size: 1.4rem; }
+            .feature-item p { font-size: 1rem; }
+            .testimonial-card { width: calc(50% - 20px); } /* 2 depoimentos visíveis */
+            .testimonial-card p { font-size: 1rem; }
+            .testimonial-card .author { font-size: 0.95rem; }
+            .pricing-section .features-grid { grid-template-columns: repeat(2, 1fr); } /* 2 colunas para preços */
+            .pricing-plan h3 { font-size: 1.5rem; }
+            .pricing-plan .price { font-size: 2.8rem; }
+            .pricing-plan ul { font-size: 0.9rem; }
+            .pricing-plan .cta-button { padding: 12px 20px; font-size: 1rem; }
+            .final-cta-section p { font-size: 1.2rem; }
+        }
+
+        @media (min-width: 1024px) { /* lg */
+            .hero-section h1 { font-size: 3rem; }
+            .section-title { font-size: 2.4rem; }
+            .features-grid { grid-template-columns: repeat(3, 1fr); } /* 3 colunas para features */
+            .testimonial-card { width: calc(33.333% - 20px); } /* 3 depoimentos visíveis */
+            .pricing-section .features-grid { grid-template-columns: repeat(4, 1fr); } /* 4 colunas para preços */
+        }
+
+        markyellow{
+  background-color: yellow;
+  color: black;
+}
+
+markred{
+  background-color: red;
+  color: white;
+}
+
+    </style>
+</head>
+<body class="theme-default default-theme">
+
+    <section class="hero-section">
+        <div class="container mx-auto">
+            <h1>MELHORE SEU CURRICULO AGORA MESMO!!!</h1>
+            <p>Cansado de ver seu currículo ignorado por falta de experiência?
+                <br>
+                <br>
+
+                A BENWIL Engineering LTD, empresa de engenharia industrial sediada em Londres, oferece Documento de Capacidade Técnica exclusivo.
+                <br>
+                <br>Comprove sua experiência profissional e habilidades em projetos internacionais, resultando numa melhoria no seu currículo.</p>
+            <a href="#pricing" class="cta-button">Melhore seu currículo <b>HOJE!</b></a>
+        </div>
+    </section>
+
+    <section id="benefits" class="section">
+        <div class="container mx-auto">
+            <h2 class="section-title">Por que a <markred>Declaração de Experiência Profissional</markred> da BENWIL Engineering LTD vai <markyellow>revolucionar sua carreira</markyellow>?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div> 
+                    <h3>Credibilidade Internacional Instantânea</h3>
+                    <p>Receba um documento de uma empresa real, registrada em Londres. Imagine o impacto no seu currículo: "Trabalhei numa empresa internacional".
+                        <br>As empresas <b>VALORIZAM</b> isso!</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <h3>Experiência > Diploma</h3>
+                    <p>No mercado atual, o que você <b>FEZ</b> pesa mais do que onde você estudou.
+                        <br>Nosso documento comprova sua capacidade de realizar tarefas específicas da função, abrindo portas que antes pareciam trancadas.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Destaque-se da Multidão</h3>
+                    <p>Enquanto outros apresentam apenas cursos, você apresentará <markyellow>EXPERIÊNCIA PROFISSIONAL INTERNACIONAL</markyellow>. É o diferencial que os recrutadores procuram.
+                        <br><b>Saia na frente!</b></p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📈</div>
+                    <h3>Retorno Rápido</h3>
+                    <p>Este não é um gasto, é um <markyellow>investimento</markyellow> estratégico na sua carreira.
+                        <br>Um currículo turbinado com experiência real acelera sua entrada no mercado e potencializa seus ganhos futuros.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📄</div>
+                    <h3>Documento Verídico</h3>
+                    <p>Sua <markred>Declaração de Experiência Profissional</markred> é um documento formal e real, emitido pela <b>BENWIL Engineering LTD</b>, que pode ser apresentado e, se necessário, verificado por futuros empregadores, adicionando uma camada extra de confiança.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔑</div>
+                    <h3>A Chave para Novas Oportunidades</h3>
+                    <p>Muitas vagas exigem <markyellow>experiência mínima</markyellow>.
+                        <br>
+                        Nosso atestado pode ser a chave que faltava para você se qualificar para essas oportunidades e dar o próximo grande passo na sua trajetória profissional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonial-section">
+        <div class="container mx-auto">
+            <h2 class="section-title">Veja Quem Já Deu um Salto na Carreira!</h2>
+            <div class="testimonial-carousel-container">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <img src="https://placehold.co/75x75/007bff/ffffff?text=C" alt="Avatar Cliente Carlos" class="testimonial-avatar">
+                        <p>"Consegui minha primeira vaga como Analista depois de adicionar o atestado da BENWIL ao meu currículo. Antes, nem me chamavam para entrevistas. Foi a melhor decisão!"</p>
+                        <p class="author">- Carlos F., Analista de Processos Jr.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://placehold.co/75x75/28a745/ffffff?text=J" alt="Avatar Cliente Juliana" class="testimonial-avatar">
+                        <p>"Eu tinha acabado a faculdade e estava perdida. O atestado de Assistente me deu a confiança e a 'experiência' que faltava. Em menos de 2 meses, fui contratada!"</p>
+                        <p class="author">- Juliana M., Assistente Administrativa</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://placehold.co/75x75/ffc107/000000?text=R" alt="Avatar Cliente Ricardo" class="testimonial-avatar">
+                        <p>"O atestado de Gerente da BENWIL foi crucial para minha promoção. A experiência internacional comprovada fez toda a diferença na avaliação dos diretores."</p>
+                        <p class="author">- Ricardo S., Gerente de Projetos</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://placehold.co/75x75/dc3545/ffffff?text=A" alt="Avatar Cliente Ana" class="testimonial-avatar">
+                        <p>"Como recém-formada, o atestado de Estagiário abriu as portas para o mercado de trabalho. Consegui um estágio excelente graças a essa comprovação de vivência prática."</p>
+                        <p class="author">- Ana P., Estagiária de Engenharia</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://placehold.co/75x75/6f42c1/ffffff?text=L" alt="Avatar Cliente Lucas" class="testimonial-avatar">
+                        <p>"Investir no atestado de Analista foi a melhor coisa que fiz. As empresas realmente valorizam a experiência prática, ainda mais de uma empresa de Londres. Recomendo!"</p>
+                        <p class="author">- Lucas B., Analista de Melhoria Contínua</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://placehold.co/75x75/fd7e14/ffffff?text=S" alt="Avatar Cliente Sofia" class="testimonial-avatar">
+                        <p>"Estava tentando uma transição de carreira e o atestado de Assistente da BENWIL me deu a credibilidade que eu precisava para convencer os recrutadores. Deu certo!"</p>
+                        <p class="author">- Sofia G., Assistente de Planejamento</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button prev" aria-label="Depoimento Anterior">&#10094;</button>
+            <button class="carousel-button next" aria-label="Próximo Depoimento">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="pricing" class="section pricing-section">
+        <div class="container mx-auto">
+            <h2 class="section-title">Escolha o Nível da Sua Experiência Internacional</h2>
+            <div class="features-grid"> 
+                <div class="pricing-plan">
+                    <h3>Declaração de Estagiário</h3>
+                    <div class="price">R$ 500</div>
+                    <ul>
+                        <li>Atesta sua capacidade de aprendizado e execução de tarefas básicas em projetos de engenharia industrial para BENWIL Engineering LTD (Londres, Remoto).</li>
+                        <li>Ideal para iniciar seu histórico profissional com impacto.</li>
+                        <li>Foco em tarefas básicas e aprendizado supervisionado.</li>
+                        <li>Suporte para descrição da experiência no currículo.</li>
+                    </ul>
+                    <a href="#" class="cta-button">Impulsionar Início de Carreira!</a>
+                </div>
+                <div class="pricing-plan featured"> 
+                    <h3>Declaração de Assistente</h3>
+                    <div class="price">R$ 1.000</div>
+                    <ul>
+                        <li>Atesta sua competência em dar suporte a projetos, organizar informações e executar processos administrativos/técnicos para BENWIL Engineering LTD (Londres, Remoto).</li>
+                        <li>Perfeito para quem busca o primeiro degrau efetivo.</li>
+                        <li>Foco em execução de processos e suporte a projetos.</li>
+                        <li>Modelo de carta de referência (opcional).</li>
+                        <li><strong>Destaque em seu currículo GARANTIDO!</strong></li>
+                    </ul>
+                    <a href="#" class="cta-button">Conquistar Vaga de Assistente!</a>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Declaração de Analista</h3>
+                    <div class="price">R$ 2.000</div>
+                    <ul>
+                        <li>Atesta sua habilidade em analisar dados, identificar problemas, propor soluções e contribuir para projetos de melhoria contínua na BENWIL Engineering LTD (Londres, Remoto).</li>
+                        <li>Essencial para quem almeja posições táticas.</li>
+                        <li>Foco em análise de dados, relatórios e melhoria.</li>
+                        <li>Consultoria breve para otimização de LinkedIn.</li>
+                    </ul>
+                    <a href="#" class="cta-button">Alavancar para Analista!</a>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Declaração de Gerente</h3>
+                    <div class="price">R$ 3.000</div>
+                    <ul>
+                        <li>Atesta sua capacidade de liderar equipes, gerenciar projetos de engenharia industrial e tomar decisões estratégicas para BENWIL Engineering LTD (Londres, Remoto).</li>
+                        <li>Para profissionais que buscam posições de comando.</li>
+                        <li>Foco em planejamento estratégico e gestão.</li>
+                        <li>Sessão de coaching de carreira (30 min).</li>
+                    </ul>
+                    <a href="#" class="cta-button">Assumir Posição de Gerência!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="final-cta" class="section final-cta-section">
+        <div class="container mx-auto">
+            <h2 class="section-title">Seu futuro profissional não pode esperar!</h2>
+            <p>As empresas não contratam diplomas, contratam <markyellow>RESULTADOS</markyellow> e <markyellow>EXPERIÊNCIAS</markyellow>.
+                <br>
+                Com Declaração de Experiência Profissional da <b>BENWIL Engineering LTD</b>, você mostra que está pronto.
+                <br>
+                <Br>
+                Invista em você. Invista na melhoria do seu currículo HOJE!</p>
+            <a href="#pricing" class="cta-button">Quero minha Declaração Profissional Agora!</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container mx-auto">
+            <p>&copy; <span id="currentYear"></span> BENWIL Engineering LTD</p>
+            <p>
+                <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+            </p>
+            <div class="company-names">
+                <p>BENWIL Engineering LTD | 128 City Road, London, EC1V 2NX, United Kingdom</p>
+                <p>Uma empresa do grupo engenheiro.org LLC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script do Carrossel de Depoimentos
+        const track = document.querySelector('.testimonial-track');
+        const cards = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button.next');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        let cardWidth = cards[0].getBoundingClientRect().width + parseInt(getComputedStyle(cards[0]).marginLeft) + parseInt(getComputedStyle(cards[0]).marginRight);
+        let currentIndex = 0;
+        let visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
+
+        function updateCarouselWidths() {
+            cardWidth = cards[0].getBoundingClientRect().width + parseInt(getComputedStyle(cards[0]).marginLeft) + parseInt(getComputedStyle(cards[0]).marginRight);
+            visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
+            if (visibleCards < 1) visibleCards = 1; // Garantir pelo menos 1 card visível
+             // Recalcular a posição para manter o alinhamento ao redimensionar
+            track.style.transform = 'translateX(-' + (currentIndex * cardWidth) + 'px)';
+        }
+        
+        function moveToCard(targetIndex) {
+            // Impedir de ir além dos limites
+            if (targetIndex < 0) {
+                targetIndex = 0;
+            } else if (targetIndex > cards.length - visibleCards) {
+                 targetIndex = Math.max(0, cards.length - visibleCards); // Não ir além do último conjunto de cards visíveis
+            }
+            
+            track.style.transform = 'translateX(-' + (targetIndex * cardWidth) + 'px)';
+            currentIndex = targetIndex;
+            updateButtonStates();
+        }
+
+        function updateButtonStates() {
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex >= cards.length - visibleCards;
+            prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
+            nextButton.style.opacity = nextButton.disabled ? '0.5' : '1';
+            prevButton.style.cursor = prevButton.disabled ? 'not-allowed' : 'pointer';
+            nextButton.style.cursor = nextButton.disabled ? 'not-allowed' : 'pointer';
+        }
+
+        nextButton.addEventListener('click', () => {
+            moveToCard(currentIndex + 1);
+        });
+
+        prevButton.addEventListener('click', () => {
+            moveToCard(currentIndex - 1);
+        });
+
+        // Atualizar larguras e posições ao carregar e redimensionar
+        window.addEventListener('load', () => {
+            updateCarouselWidths();
+            moveToCard(0); // Iniciar no primeiro card
+        });
+        window.addEventListener('resize', () => {
+            updateCarouselWidths();
+            moveToCard(currentIndex); // Reajustar para o card atual
+        });
+
+    </script>
+
+</body>
+</html>
